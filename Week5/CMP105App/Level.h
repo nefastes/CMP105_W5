@@ -5,6 +5,7 @@
 #include "Framework/GameObject.h"
 #include "Zombie.h"
 #include "Mario.h"
+#include "Player.h"
 #include <string>
 #include <iostream>
 
@@ -33,4 +34,7 @@ private:
 
 	Mario mario;
 	sf::Texture marioTex;
+
+	Player player;
+	sf::Texture playerTex;
 };

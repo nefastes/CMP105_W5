@@ -22,6 +22,14 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	mario.setOrigin(sf::Vector2f(mario.getSize().x / 2, mario.getSize().y / 2));
 	mario.setPosition(111, 111);
 	mario.setVelocity(sf::Vector2f(100.f, 0));
+
+	playerTex.loadFromFile("gfx/DonaldTrump.png");
+	player.setInput(input);
+	player.setTexture(&playerTex);
+	player.setSize(sf::Vector2f(128, 128));
+	player.setOrigin(sf::Vector2f(player.getSize().x / 2, player.getSize().y / 2));
+	player.setPosition(444, 111);
+	player.setVelocity(sf::Vector2f(100.f, 0));
 }
 
 Level::~Level()
