@@ -4,6 +4,7 @@
 #include "Framework/Input.h"
 #include "Framework/GameObject.h"
 #include "Zombie.h"
+#include "Mario.h"
 #include <string>
 #include <iostream>
 
@@ -29,4 +30,7 @@ private:
 	//Game Objects
 	Zombie theMostAmazingAndIncredibleZombie;
 	sf::Texture zombieTex;
+
+	Mario mario;
+	sf::Texture marioTex;
 };
