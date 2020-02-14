@@ -40,10 +40,11 @@ Level::~Level()
 // handle user input
 void Level::handleInput(float dt)
 {
-	if (input->isKeyDown(sf::Keyboard::Escape))		window->close();
+	if (input->isKeyDown(sf::Keyboard::Escape)) window->close();
 	
 	theMostAmazingAndIncredibleZombie.handleInput(dt);
 	mario.handleInput(dt);
+	player.handleInput(dt);
 }
 
 // Update game objects
@@ -51,6 +52,7 @@ void Level::update(float dt)
 {
 	theMostAmazingAndIncredibleZombie.update(dt);
 	mario.update(dt);
+	player.update(dt);
 }
 
 // Render level
@@ -59,6 +61,7 @@ void Level::render()
 	beginDraw();
 	window->draw(theMostAmazingAndIncredibleZombie);
 	window->draw(mario);
+	window->draw(player);
 	endDraw();
 }
 

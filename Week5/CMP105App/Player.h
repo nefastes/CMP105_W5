@@ -14,5 +14,8 @@ private:
 	Animation walk;
 	Animation spawn;
 	Animation idle;
+
+	bool isMoving;
+	bool hasSpawned;
 };
 

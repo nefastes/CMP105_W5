@@ -33,9 +33,10 @@ public:
 	bool getLooping() { return isLooping; };
 	void setPlaying(bool play) { isPlaying = play; };
 	bool getPlaying() { return isPlaying; };
-	void play(bool play) { isPlaying = true; };
+	void play() { isPlaying = true; };
 	void stop();
 	void pause() { isPlaying = false; };
+	bool getState() { return isFinished; };
 
 protected:
 	std::vector<sf::IntRect>frames;
@@ -46,4 +47,5 @@ protected:
 	bool isLooping;
 	bool isPlaying;
 	float elapsedTime;
+	bool isFinished;
 };

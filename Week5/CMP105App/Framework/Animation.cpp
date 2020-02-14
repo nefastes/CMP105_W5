@@ -9,6 +9,7 @@ Animation::Animation()
 	isLooping = true;
 	animationSpeed = 0.0f;
 	flipped = false;
+	isFinished = false;
 }
 
 // Adds animation frame. Rect object represent a single sprite frame
@@ -54,6 +55,7 @@ void Animation::animate(float dt)
 				{
 					currentFrame--;
 					setPlaying(false);
+					isFinished = true;
 				}
 			}
 			elapsedTime = 0;
